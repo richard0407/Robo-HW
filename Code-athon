@@ -1,3 +1,4 @@
+//Fizz Buzz
 import java.util.Scanner;
 
 class Main {
@@ -20,7 +21,7 @@ class Main {
     }
   }
 }
-
+//N Fibonacci
 import java.util.Scanner;
 
 class Main {
@@ -43,7 +44,7 @@ class Main {
     }
   }
 }
-
+//N Factorial
 import java.util.Scanner;
 
 class Main {
@@ -63,4 +64,34 @@ class Main {
     }
   }
 }
+//Quadratic Solver
+import java.util.Scanner;
 
+class Main {
+  public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter an number: ");
+    double a = scan.nextDouble();
+    System.out.println("Enter another number: ");
+    double b = scan.nextDouble();
+    System.out.println("Enter a third number:");
+    double c = scan.nextDouble();  
+
+    double d = Math.pow(b,2) - 4 * a * c;
+
+    if(d > 0){
+      System.out.println(a + "^2 + " + b + "x + " + c);
+      double x1 = (-b + Math.sqrt(d) / (2 * a));
+      double x2 = (-b - Math.sqrt(d) / (2 * a));
+      System.out.println("The answer is " + x1 + " and " + x2);  
+    }else if(d == 0){
+      System.out.println(a + "^2 + " + b + "x + " + c);
+      double x1 = (-b/(2 * a));
+      System.out.println("The answer is " + x1);  
+    }else if(d < 0){
+      System.out.println("There is no real solution");
+    }
+    
+  }
+}
