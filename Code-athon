@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter an number: ");
+    double a = scan.nextDouble();
+    double b = Math.round(a/15);
+    double b1 = Math.round(a/5);
+    double b2 = Math.round(a/3);
+    
+    if(a/15 == b){
+      System.out.println("Fizz Buzz!");
+    }else if(a/5 == b1){
+      System.out.println("Buzz!");
+    }else if(a/3 == b2){
+      System.out.println("Fizz!");
+    }else{
+      System.out.println("Invalid");
+    }
+  }
+}
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter an integer: ");
+    int a = scan.nextInt();
+    System.out.println("Enter a larger integer: ");
+    int b = scan.nextInt();
+    System.out.println("Enter a number for length of Fibonacci Sequence.");
+    int x = scan.nextInt() - 2;
+    System.out.println(a);
+    System.out.println(b);
+
+    for(int i = 0; i < x; i++){
+      int c = a + b;
+      System.out.println(c);
+      a = b;
+      b = c;
+    }
+  }
+}
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter an integer: ");
+    int x = scan.nextInt();
+    int y = x;
+    //System.out.println("\n" + x);
+    for(int i = x; i > 1; i--){
+      x -= 1;
+      y *= x;
+      //System.out.println(y);
+      if(x == 1){
+        System.out.println(y);
+      }
+    }
+  }
+}
+
