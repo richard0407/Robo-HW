@@ -1,4 +1,3 @@
-/*N Fibonacci*/
 import java.util.Scanner;
 
 class Main {
