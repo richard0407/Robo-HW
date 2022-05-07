@@ -1,1 +1,23 @@
+/*N Fibonacci*/
+import java.util.Scanner;
 
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter an integer: ");
+    int a = scan.nextInt();
+    System.out.println("Enter a larger integer: ");
+    int b = scan.nextInt();
+    System.out.println("Enter a number for length of Fibonacci Sequence.");
+    int x = scan.nextInt() - 2;
+    System.out.println(a);
+    System.out.println(b);
+
+    for(int i = 0; i < x; i++){
+      int c = a + b;
+      System.out.println(c);
+      a = b;
+      b = c;
+    }
+  }
+}
