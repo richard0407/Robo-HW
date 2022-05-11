@@ -1,0 +1,30 @@
+package frc.robot.commands;
+
+import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+
+public class StandardAuto extends SequentialCommandGroup {
+    // put subsystem definitions here
+  private final Drivetrain drivetrain;
+    
+  public StandardAuto(Drivetrain drivetrain/*  put subsystems arguments here  */){
+    addCommands(/*  put your procedure of commands here  */ 
+      new RaceCommandGroup(
+        new waitCommand(15);
+        new RunCommand(()->{
+          new moveForward(drivetrain,currentPos),
+          new turnRight(drivetrain,currentPos),
+          new detectPos(currentPos,finalPos),
+          })
+        new waitUntilCommand(
+        (detectPos)->{currentPos = finalPos}
+        )
+      )
+    );
+    addRequirements(drivetrain/*  put subsystems here  */);
+  }
+/*  runs once the command has finished/been interrupted  */
+  @Override
+  public void end(boolean interrupted){
+    new endRobot(drivetrain);    
+  }
+}
